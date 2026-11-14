@@ -1,0 +1,12 @@
+node_modules/
+.wrangler/
+.dev.vars
+
+# Learning content (course material, not part of the Worker)
+MISSION.md
+NOTES.md
+RESOURCES.md
+learning-records/
+lessons/
+reference/
+assets/

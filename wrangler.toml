@@ -1,0 +1,16 @@
+name = "path-based-routing"
+main = "src/index.ts"
+compatibility_date = "2026-10-01"
+workers_dev = true
+
+[vars]
+# Route Rules: path prefixes that go to the Publish Origin. Everything else goes to the EDS Origin.
+# JSON array of strings. See docs/asset-paths.md before adding one.
+ROUTE_RULES = '["/search", "/maps"]'
+
+# Stand-ins for the POC: Google represents AEM Publish, Instagram represents EDS.
+PUBLISH_ORIGIN = "https://www.google.com"
+EDS_ORIGIN = "https://www.instagram.com"
+
+# Optional secret for AEM CDN verification (Publish only). Leave unset for the stand-ins:
+#   npx wrangler secret put AEM_EDGE_KEY
